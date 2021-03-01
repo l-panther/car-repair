@@ -10,8 +10,6 @@ leroy_rus@hotmail.com
 
 Description
 -----------
-
-This is my interpretation of an existing website found at: http://mobilecarbodyrepair.co/
 This website provides information about the services, work completed and contact details for Mobile Car Body Repair Specialist.
 
 Installation
