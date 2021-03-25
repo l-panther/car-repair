@@ -82,23 +82,21 @@
 			<!--Skiplink -->
 			<a href="#introduction" title="Skip to main content" class="skiplink">Skip to main content</a>
 			
-			<main role="main" class="w3-black main-content" id="main">
+			<main role="main" class="w3-animate-bottom main-content" id="main">
 					
 				<!-- Banner--> 
 				<div class="w3-row  w3-black w3-text-white" id="banner">
-					<div class="spacing">
-						<div class="w3-col s12 m7 l6 w3-large w3-center">
+						<div class="w3-col s12 m12 l6 w3-large w3-center w3-animate-bottom">
 
 							<h1>THE CAR<br>BODY REPAIR SPECIALIST</h1>
 							<p>Have a problem?</p>
 							<a href="#contact">CONTACT ME</a>
 						</div>
 
-						<div class="w3-col s12 m5 l6 w3-center w3-animate-right" id="car">
-							<img src="images/banner/car.png" alt="Portrait" class="w3-hide-medium w3-hide-large">
+						<div class="w3-col s12 m12 l6 w3-center w3-animate-right" id="car">
+							<img src="images/banner/car.png" alt="Portrait" class="w3-hide-medium w3-hide-large car-sm">
 							<img src="images/banner/car2.png" alt="Portrait" class="w3-hide-small">
 						</div>
-					</div> <!-- End spacing -->
 				</div> <!-- End banner-->
 						
 				<!-- <div class="w3-display-container">
@@ -110,7 +108,7 @@
 				</div> -->
 				
 				<!-- Introduction -->
-				<div id="introduction" class="w3-animate-bottom">
+				<div id="introduction">
 					
 					<div class="w3-row-padding w3-center theme-grad" id="service-preview">
 						<!-- Preview 1 -->
@@ -134,6 +132,12 @@
 
 						</div>
 					</div> <!-- End service preview -->
+					
+					<div>
+						<img src="images/index/page-divide-small.png" alt="Page divide" class="w3-hide-medium w3-hide-large">
+						<img src="images/index/page-divide-mid.png" alt="Page divide" class="w3-hide-small w3-hide-large">
+						<img src="images/index/page-divide-large.png" alt="Page divide" class="w3-hide-small w3-hide-medium">
+					</div>
 
 					<article class="spacing-t">
 						<h2>What We Do</h2>
@@ -154,10 +158,8 @@
 						<p class="w3-margin-bottom">Check out some of our work.</p>
 
 						<img src="images/index/work.jpg" alt="Completed work of car bumper"/>
-
-						<div>
-							<a href="#work" onclick="w3.show('#work'), w3.hide('#introduction'), w3.hide('#introduction-work'), w3.hide('#services'),w3.hide('#about'), w3.hide('#stroke-bottom'), w3.hide('#contact')" class=" w3-hover-text-white work-link">VIEW  WORK</a>
-						</div>
+						
+						<a href="#work" onclick="w3.show('#work'), w3.hide('#introduction'), w3.hide('#introduction-work'), w3.hide('#services'),w3.hide('#about'), w3.hide('#stroke-bottom'), w3.hide('#contact')" class=" w3-hover-text-white work-link">VIEW  WORK</a>
 					</article>
 
 					<article class="w3-container w3-col s12 m6 l6 w3-center" id="more-about">
@@ -166,9 +168,7 @@
 
 						<img src="images/index/about.jpg" alt="Company van with side door open"/>
 
-						<div>
-							<a href="#about" onclick="w3.show('#about'), w3.hide('#introduction'), w3.hide('#introduction-work'), w3.hide('#contact')" class="w3-hover-text-white about-link">ABOUT US</a>
-						</div>
+						<a href="#about" onclick="w3.show('#about'), w3.hide('#introduction'), w3.hide('#introduction-work'), w3.hide('#contact')" class="w3-hover-text-white about-link">ABOUT US</a>
 					</article>
 				</div> <!-- End introduction extra -->
 

@@ -1,5 +1,11 @@
+/*
+	CSS for Car Repair 
+	By Leroy Russell
+*/
+
 /* -------------------------------- IMPORT FONTS -------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Carter+One");
+@import url("https://fonts.googleapis.com/css?family=Lato");
 
 /* -------------------------------- IMPORT FILES -------------------------------- */
 @import url("font-awesome.min.css");
@@ -74,7 +80,7 @@ body {
   font-size: 16px !important;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #f2f2f2;
-  background: #fff !important;
+  background: #191c21 !important;
   /* For browsers that do not support gradients */
   letter-spacing: 3px;
   line-height: 1.6;
@@ -122,23 +128,11 @@ dt {
 	text-align: justify;
 	overflow: hidden; }
 
+/* Themes color for background */
 .theme-grad { background: linear-gradient(#ea8f02, #cc6301); }
 
 .theme-grad2 { background: linear-gradient(#ea8f02, #a75000); }
 .theme-grad { background: #cc6301; }
-
-#banner a, 
-#introduction a, 
-#introduction-work a 
-{ background: linear-gradient(#ea8f02, #a75000);
-	font-weight: 600}
-
-#banner a:hover, 
-#introduction a:hover, 
-#introduction-work a:hover 
-{ 
-	background: linear-gradient(#ffff, #eee);
-	color: #3f3f3f; }
 
 .theme-text-light { color: #ea8f02; }
 
@@ -236,6 +230,7 @@ dt {
 	background-size: cover; 
 	width: 100%;
 	display: block;
+	padding: 40px 20px 60px 20px;
 }
 
 #banner h1 { 
@@ -272,9 +267,8 @@ dt {
 #banner .w3-badge:hover, #banner a:hover{ box-shadow: 0px 0px 4px 0px #141414; }
 
 #banner a { 
-	width: 100px;
-	color: #fafafa; 
 	margin: auto;
+	margin-top: 20px;
 	border: 1px solid #3f3f3f;
 	border-radius: 2px;
 	padding: 12px 30px 10px 30px; 
@@ -293,24 +287,39 @@ dt {
 #service-preview h3 { 
 	color: #fff; }
 
+#main { 
+	background: #191c21 !important; }
+
 #service-preview #wheel, #service-preview #scuff, #service-preview #smart { 
 	padding: 10px; }
 
-
-#introduction a, #introduction-work a { 
-	width: 100px;
-	color: #f2f2f2 !important; 
+#banner a, 
+#introduction a, 
+#introduction-work a 
+{ 
+	width: 200px;
 	margin: auto;
+	display: block;
 	border-radius: 2px;
 	padding: 12px 20px 12px 20px; 
 	font-size: 12px;
-	font-weight: 600; }
+	font-weight: 500; 
+	background: linear-gradient(#3f3f3f, #141414);
+	color: #f2f2f2; 
+	border: 1px solid #ea8f02;
+}
 
-#introduction a:hover, #introduction-work a:hover { 
-	background: #3f3f3f;
-	background: #fafafa;
-	color: #3f3f3f !important;
+#banner a:hover, 
+#introduction a:hover, 
+#introduction-work a:hover 
+{ 
+	box-shadow: 0px 0px 4px 0px #141414; 
+	background: linear-gradient(#ea8f02, #ea8f02);
+	color: #f2f2f2;
+	border: 1px solid #000;
 	box-shadow: 0px 0px 4px 0px #141414; }
+
+#introduction .services-link { margin-top: 30px; }
 
 #introduction img { width: 100%; }
 
@@ -354,6 +363,8 @@ dt {
 	color: #ea8f02; }
 
 /* -------------------------------- WORK PAGE -------------------------------- */
+#work, #work h2 { color: #f2f2f2; }
+
 #work .our-work img { width: 100%; }
 
 #work .our-work .w3-col { padding: 0px 10px 0px 10px; }
@@ -362,7 +373,7 @@ dt {
 
 #work .w3-card h3 { 
 	background: #66a1d7;
-	background: #000;
+	background: none;
 	color: #ea8f02; 
     font-size: 1em;
 	padding: 10px; }
@@ -376,21 +387,20 @@ dt {
 	width: 100%;
 	color: #f2f2f2; 
 	margin: auto;
-	background: #ececec;
-	background: linear-gradient(#ea8f02, #cc6301); 
+	background: #3f3f3f;
 	border-top: 1px solid #d5d5d5;
 	padding: 10px 20px 10px 20px; 
 	font-size: 0.9em; 
 	font-weight: 600; }
 
 #work button:hover { 
-	background: #3f3f3f;
+	background: linear-gradient(#ea8f02, #cc6301); 
 	color: #ffffff; }
 
 .w3-modal { background: rgb(0,0,0, 0.7); }
 
 .w3-modal-content { 
-	background: #000; }
+	background: #141414; }
 
 .w3-modal header h2 { 
 	font-size: 1em;
@@ -418,9 +428,7 @@ dt {
 	margin-right: -26px; 
 	margin-top: -10px;  }
 
-.w3-modal i { 
-	margin-top: 1px; 
-	margin-right: 1px; }
+.w3-modal i { margin: -4px 0px 0px -2px !important; }
 
 .w3-modal span:hover { cursor: pointer; }
 
@@ -495,7 +503,9 @@ dt {
 
 #contact h2, #contact dt { font-weight: bold; }
 
-#contact dt { color: #eee; }
+#contact dt { 
+	color: #eee;
+	font-family: "Carter One"; }
 
 #contact h2 { font-size: 1.8em; }
 
@@ -580,17 +590,18 @@ footer #copyright, #footer #copyright2 {
 	
 	/* Banner */
 	#banner {
+		padding: 30px 20px 50px 20px;
 		font-size: 0.8em; }
 
 	#banner a { 
-		width: 100px;
+		margin-top: 20px;
 		font-size: 0.8em; }
 	
 	/* Font */
 	#banner h1 { font-size: 1.3em; }
 	
 	#banner img { 
-		width: 100%;
+		width: 450px;
 		margin: auto !important;
 		margin-top: 40px !important; }
 	
@@ -677,11 +688,7 @@ footer #copyright, #footer #copyright2 {
 		margin-top: -10px !important; 
 		font-size: 0.9em !important;
 		}
-	
-	#nav-links {
-	
-}
-	
+
 	#banner { 
 		background: #000;
 		background: url("../images/banner/fog.png") no-repeat; 
@@ -689,6 +696,8 @@ footer #copyright, #footer #copyright2 {
 		margin-top: 40px;
 		width: 100%;
 	}
+	
+	#banner a { font-size: 0.8em; }
 	
 	/* Font */
 	#banner h1 { font-size: 1.4em; }
@@ -700,13 +709,14 @@ footer #copyright, #footer #copyright2 {
 	
 	h2 { font-size: 1.8em; }
 	
-	#banner a, #introduction a, #introduction-work a {
-		font-size: 1em;
+	#introduction a, #introduction-work a {
+		font-size: 0.8em;
 	}
 		
 	#introduction {
-	padding-bottom: 30px;
-}
+		padding-bottom: 30px;
+	}
+	
 	#service-preview img { width: 80px !important; }
 	
 	/* Service */
@@ -725,7 +735,7 @@ footer #copyright, #footer #copyright2 {
 	
 	#work .our-work .w3-col { padding: 0px 40px 0px 40px; }
 	
-	#work .prev, #work .next { margin-top: -300px;  }
+	#work .prev, #work .next { margin-top: -200px;  }
 	
 	/* Contact */
 	#contact .w3-badge {

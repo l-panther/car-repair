@@ -29,4 +29,4 @@ This website was developed to improve the existing website for Mobile Car Body R
 
 The url of the existing website is: http://mobilecarbodyrepair.co/. 
 
-This website is an example of my front-end web development capabilities. For more information about the development of this project, read the Development Plan for Car Repair.
+This website is an example of my front-end web development capabilities. 
