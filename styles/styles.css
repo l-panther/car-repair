@@ -275,8 +275,9 @@ dt {
 	font-size: 0.9em;  }
 
 #banner img { 
-	width: 350px;
-	margin-top: 50px; }
+	width: 80%;
+	margin: auto; 
+	margin-top: 40px; }
 
 /* -------------------------------- INDEX PAGE -------------------------------- */
 #service-preview { 
