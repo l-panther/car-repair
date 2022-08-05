@@ -53,12 +53,12 @@ $(document).ready(function () {
 			$(link2).css("color", "#adadad");
 			$(link3).css("color", "#adadad");
 			$(link4).css("color", "#adadad");
-			
-			$("#introduction a").css("color", "#f2f2f2");
+
+			$("#banner a").hover(function() {
+				$(this).css("color", "#f2f2f2");
+			});
 			$("#introduction-work a").css("color", "#f2f2f2");
 		});	
 		
 	}
-	
-	
 });

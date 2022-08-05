@@ -28,7 +28,16 @@ $(document).ready(function() {
             },
             "json"
         );	
-		
     }
-	
+
+    setTimeout(moveLeft, 100);
+
+    function moveLeft() {
+        $("#car img").animate({rotate: '0.3deg'}, "fast");
+        $("#car img").animate({rotate: '-0.3deg'}, "fast");
+        $("#car img").animate({rotate: '0.3deg'}, "fast");
+        $("#car img").animate({rotate: '-0.3deg'}, "fast");
+        $("#car img").animate({marginLeft: '0px'}, "slow");
+        $("#car img").animate({marginLeft: '6px'}, "fast");
+    }
 });
