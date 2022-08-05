@@ -67,6 +67,31 @@ a:visited {
 
 /* -------------------------------- PAGE DEFAULTS -------------------------------- */
 /* HTML scrolling */
+/* Basic */
+@-ms-viewport {
+	width: device-width;
+}
+
+body {
+	-ms-overflow-style: scrollbar;
+}
+
+@media screen and (max-width: 480px) {
+
+	html, body {
+		min-width: 320px;
+	}
+
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -77,12 +102,11 @@ html {
 
 /* Body styling */
 body {
-  font-size: 16px !important;
+  font-size: 16px;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #f2f2f2;
   background: #191c21 !important;
   /* For browsers that do not support gradients */
-  letter-spacing: 3px;
   line-height: 1.6;
   letter-spacing: 1px;
   text-align: justify;
@@ -143,8 +167,11 @@ dt {
 .background-white { background: #ffffff; }
 
 .active, .portfolio-link:focus { 
-	color: #66a1d7; 
 	color: #ea8f02 !important; }
+
+#banner .active { 
+	color: #fff!important;
+	font-weight: bold; }
 
 /* ------------------------------ SKIPLINKS ------------------------------ */ 
 .skiplink { 
@@ -230,17 +257,27 @@ dt {
 	background-size: cover; 
 	width: 100%;
 	display: block;
-	padding: 40px 20px 60px 20px;
+	padding: 60px 20px;
+}
+
+.page-banner { padding: 25px; }
+
+.page-banner img { 
+	position: absolute;
+	width: 120px !important;
+	margin-top: -90px !important;
+	left: 0; }
+
+.page-banner h2 { 
+	text-align: right;
+	font-size: 2em;
+	margin-bottom: 0;
 }
 
 #banner h1 { 
 	margin-top: 10px;
 	margin-bottom: 10px;
-	font-size: 1.4em; }
-
-#banner img { 
-	width: 100%;
-	margin-top: 50px; }
+	font-size: 1.5em !important; }
 
 .banner-text { 
 	width: 500px;
@@ -268,31 +305,30 @@ dt {
 
 #banner a { 
 	margin: auto;
-	margin-top: 20px;
-	border: 1px solid #3f3f3f;
-	border-radius: 2px;
-	padding: 12px 30px 10px 30px; 
-	font-size: 0.9em;  }
+	margin-top: 20px; }
 
 #banner img { 
 	width: 80%;
 	margin: auto; 
-	margin-top: 40px; }
+	margin-top: 50px; 
+	margin-left: 200px; }
 
 /* -------------------------------- INDEX PAGE -------------------------------- */
 #service-preview { 
-	color: #fff;
-	padding-bottom: 20px;
+	padding-bottom: 50px;
 	}
 
-#service-preview h3 { 
-	color: #fff; }
+#service-preview, #service-preview h3 { 
+	color: rgb(54, 54, 54); }
 
 #main { 
 	background: #191c21 !important; }
 
-#service-preview #wheel, #service-preview #scuff, #service-preview #smart { 
-	padding: 10px; }
+#service-preview, .page-banner {
+	background: #e28f18;
+}
+
+#service-preview #wheel, #service-preview #scuff, #service-preview #smart { padding: 10px; }
 
 #banner a, 
 #introduction a, 
@@ -301,12 +337,12 @@ dt {
 	width: 200px;
 	margin: auto;
 	display: block;
-	border-radius: 2px;
-	padding: 12px 20px 12px 20px; 
-	font-size: 12px;
+	border-radius: 3px;
+	padding: 10px 20px 10px 20px; 
+	font-size: 10px;
 	font-weight: 500; 
 	background: linear-gradient(#3f3f3f, #141414);
-	color: #f2f2f2; 
+	color: #f2f2f2 !important; 
 	border: 1px solid #ea8f02;
 }
 
@@ -317,22 +353,17 @@ dt {
 	box-shadow: 0px 0px 4px 0px #141414; 
 	background: linear-gradient(#ea8f02, #ea8f02);
 	color: #f2f2f2;
-	border: 1px solid #000;
-	box-shadow: 0px 0px 4px 0px #141414; }
+	border: 1px solid #000; }
 
 #introduction .services-link { margin-top: 30px; }
 
 #introduction img { width: 100%; }
 
+#service-preview,  #service-preview h3 { color: #303030 ; }
+
 #service-preview img { 
-	width: 80px;
-	margin-top: 30px !important;
-	background: #1d1d1d;
-	background: #f2f2f2;
-	border-radius: 100%;
-	border: 1px solid #3f3f3f;
-	color: #fff;
-	padding: 10px; }
+	width: 100px;
+	margin-top: 30px !important; }
 
 #introduction-work img { 
 	width: 90%;
@@ -364,6 +395,13 @@ dt {
 	color: #ea8f02; }
 
 /* -------------------------------- WORK PAGE -------------------------------- */
+.info-link {
+	color: #ea8f02 !important; 
+	text-decoration-line: underline !important;
+}
+
+.info-link:hover, .info-link:focus { cursor: pointer; }
+
 #work, #work h2 { color: #f2f2f2; }
 
 #work .our-work img { width: 100%; }
@@ -395,13 +433,14 @@ dt {
 	font-weight: 600; }
 
 #work button:hover { 
-	background: linear-gradient(#ea8f02, #cc6301); 
+	background: linear-gradient(#3f3f3f, #333333);
 	color: #ffffff; }
 
-.w3-modal { background: rgb(0,0,0, 0.7); }
+.w3-modal { background: rgb(0,0,0, 0.9); }
 
 .w3-modal-content { 
-	background: #141414; }
+	background: #141414;
+	box-shadow: 1px 1px 14px 0px #000; }
 
 .w3-modal header h2 { 
 	font-size: 1em;
@@ -417,7 +456,7 @@ dt {
 	width: 90%;
 	padding: 10px 0px 20px 0px; }
 
-.w3-modal .w3-closebtn { 
+.w3-modal i { 
 	font-size: 17px;
 	font-weight: bold; 
 	color: #3f3f3f; 
@@ -427,9 +466,9 @@ dt {
 	border-radius: 100%; 
 	background: #fff;
 	margin-right: -26px; 
-	margin-top: -10px;  }
-
-.w3-modal i { margin: -4px 0px 0px -2px !important; }
+	margin-top: -10px; 
+	overflow: hidden;
+	padding: 4px 5px; }
 
 .w3-modal span:hover { cursor: pointer; }
 
@@ -567,8 +606,6 @@ footer #copyright, #footer #copyright2 {
 
 /* -------------------------------- MEDIA QUERIES: Tablet -------------------------------- */
 @media only screen and (min-width: 600px) {
-	/* Body font */
-	body { font-size: 18px !important; }
 
 	#logo { 
 		width: 110px; }
@@ -593,36 +630,49 @@ footer #copyright, #footer #copyright2 {
 	#banner {
 		padding: 30px 20px 50px 20px;
 		font-size: 0.8em; }
+	
+	.page-banner { padding: 40px; }
 
+	.page-banner img { 
+		width: 190px !important;
+		margin-top: -130px !important;
+		margin-left: 60px !important;
+		left: 0; }
+	
+	.page-banner h2 { 
+		font-size: 2.4em;
+	}
+	
 	#banner a { 
-		margin-top: 20px;
-		font-size: 0.8em; }
+		margin-top: 20px; }
 	
 	/* Font */
-	#banner h1 { font-size: 1.3em; }
+	#banner h1 { font-size: 1.8em !important; }
 	
 	#banner img { 
 		width: 450px;
-		margin: auto !important;
-		margin-top: 40px !important; }
+		margin: auto;
+		margin-top: 40px; 
+		margin-left: 350px; }
 	
 	#more-about { padding-top: 0px; }
-	
-	#service-preview { padding-bottom: 30px; }
+
+	#service-preview { 
+		padding-bottom: 40px;
+	}
 	
 	#service-preview img { 
-		width: 85px;
+		width: 100px;
 		margin-top: 25px !important; }
 	
 	#service-preview h3 { 
-		font-size: 1em; }
+		font-size: 1.2em; }
 	
 	/* Service */
 	#services-list h2 { 
 		margin: 0px; }
 	
 	h2 { font-size: 1.5em; }
-	
 	
 	#services-list .price { 
 		text-align: left !important;
@@ -664,12 +714,10 @@ footer #copyright, #footer #copyright2 {
 
 /* -------------------------------- MEDIA QUERIES: Desktop -------------------------------- */
 @media only screen and (min-width: 991px) {
-	/* Body font */
-	body { font-size: 20px !important; }
 	
 	.main-content { 
 		width: 75%;
-		max-width: 70em;
+		max-width: 80em;
 		margin: auto; }
 		
 	.spacing {
@@ -694,19 +742,30 @@ footer #copyright, #footer #copyright2 {
 		background: #000;
 		background: url("../images/banner/fog.png") no-repeat; 
 		background-size: cover; 
-		margin-top: 40px;
+		padding: 80px 40px 100px 40px;
 		width: 100%;
+	}
+
+	.page-banner img { 
+		width: 220px !important;
+		margin-top: -130px !important;
+		margin-left: 40px !important;
+		left: 0; }
+	
+	.page-banner h2 { 
+		font-size: 2.6em;
 	}
 	
 	#banner a { font-size: 0.8em; }
 	
 	/* Font */
-	#banner h1 { font-size: 1.4em; }
+	#banner h1 { font-size: 1.4em !important; }
 	
 	#banner img { 
-		width: 95%;
-		margin: auto !important;
-		margin-top: 10px !important; }
+		width: 100%;
+		margin: auto;
+		margin-top: 10px; 
+		margin-left: 200px; }
 	
 	h2 { font-size: 1.8em; }
 	
@@ -718,7 +777,7 @@ footer #copyright, #footer #copyright2 {
 		padding-bottom: 30px;
 	}
 	
-	#service-preview img { width: 80px !important; }
+	#service-preview img { width: 120px; }
 	
 	/* Service */
 	#services-list h3 { 
@@ -737,7 +796,9 @@ footer #copyright, #footer #copyright2 {
 	#work .our-work .w3-col { padding: 0px 40px 0px 40px; }
 	
 	#work .prev, #work .next { margin-top: -200px;  }
-	
+
+	.w3-modal .w3-container { box-shadow: 0px 0px 10px 0px #000; }
+
 	/* Contact */
 	#contact .w3-badge {
 		width: 50px;
